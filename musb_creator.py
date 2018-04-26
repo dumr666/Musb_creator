@@ -1,4 +1,5 @@
 # Music USB creator for your autoradio
+# Author: Dumr666
 # Usage:
 # python musb_creator.py <link to playlist> <destination drive>
 # must use m3u playlist
