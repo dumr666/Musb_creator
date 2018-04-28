@@ -16,3 +16,12 @@ class track():
         self.title = title
         self.path = path
 
+print('Number of arguments:', len(sys.argv), 'arguments.')
+print('Argument List:', str(sys.argv))
+print('Argument stevilka 2:', str(sys.argv[1]))
+
+PlaylistLink = str(sys.argv[1])
+DestDrive = str(sys.argv[2])
+
+print("Destination drive: ", DestDrive)
+print("Playlist link: ", PlaylistLink)
