@@ -74,10 +74,9 @@ for track in tracklist:
     print(track.artist, track.title, track.length, " -- ", track.path)
     usb_folder = DestDrive + track.artist
     if not os.path.isdir(usb_folder):
-        print("Kreiranje mape na usbju: ", usb_folder)
         os.makedirs(usb_folder)
         print("Home directory %s was created." %usb_folder)
     
     # Copy mp3 to destination folder
-    print("kopiranje v mapo ", track.artist, track.title)
+    print("Copying file: ", track.artist, track.title)
     shutil.copy2(track.path, usb_folder)
