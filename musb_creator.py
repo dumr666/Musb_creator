@@ -40,7 +40,8 @@ def parsem3u(m3ufile):
         if line.startswith('#EXTINF:'):
             # pull length and title from #EXTINF line
             length,title=line.split('#EXTINF:')[1].split(',',1)
-            song=track(length,title,None)
+            artist, song = title.split('-')
+            song=track(artist,song,None)
         elif (len(line) != 0):
             # pull song path from all other, non-blank lines
             song.path=line
