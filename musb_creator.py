@@ -75,7 +75,7 @@ for track in tracklist:
     usb_folder = DestDrive + track.artist
     if not os.path.isdir(usb_folder):
         os.makedirs(usb_folder)
-        print("Home directory %s was created." %usb_folder)
+        print("Folder %s was created" %usb_folder)
     
     # Copy mp3 to destination folder
     print("Copying file: ", track.artist, track.title)
