@@ -77,6 +77,6 @@ for track in tracklist:
         os.makedirs(usb_folder)
         print("Folder %s was created" %usb_folder)
     
-    # Copy mp3 to destination folder
+    # Copy mp3 to destination folder 
     print("Copying file: ", track.artist, track.title)
     shutil.copy2(track.path, usb_folder)
