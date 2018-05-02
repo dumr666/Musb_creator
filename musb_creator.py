@@ -61,6 +61,7 @@ def parsem3u(m3ufile):
 # Get script arguments 
 ScriptPath = str(sys.argv[0])
 PlaylistLink = str(sys.argv[1])
+
 DestDrive = str(sys.argv[2])
 
 # Print out paths
@@ -68,6 +69,8 @@ print("Script path: ", ScriptPath)
 print("Destination drive: ", DestDrive)
 print("Playlist link: ", PlaylistLink)
 tracklist = parsem3u(PlaylistLink)
+tracklist_len = len(tracklist)
+print("Dolzina trackliste je: ", tracklist_len)
 
 # Loop in tracklist
 for track in tracklist:
