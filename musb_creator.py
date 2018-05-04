@@ -71,7 +71,8 @@ print("Playlist link: ", PlaylistLink)
 tracklist = parsem3u(PlaylistLink)
 tracklist_len = len(tracklist)
 print("Dolzina trackliste je: ", tracklist_len)
-
+copyProgStep = 100.0 / tracklist_len
+copyProg = 0.0
 # Loop in tracklist
 for track in tracklist:
     print(track.artist, track.title, track.length, " -- ", track.path)
@@ -80,6 +81,8 @@ for track in tracklist:
         os.makedirs(usb_folder)
         print("Folder %s was created" %usb_folder)
     
+    # Print out progress
+    copyProg += copyProgStep
     # Copy mp3 to destination folder 
-    print("Copying file: ", track.artist, track.title)
+    print(round(copyProg), "% Done. Copying file: ", track.artist, track.title)
     shutil.copy2(track.path, usb_folder)
