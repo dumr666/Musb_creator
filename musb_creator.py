@@ -37,9 +37,11 @@ def parsem3u(m3ufile):
     # initialize playlist variables before reading file
     tracklist=[]
     song=track(None,None,None,None)
-
+    i = 0;
     for line in m3ufile:
+        i += 1
         line=line.strip()
+        print("Vrstica napake je: ", i)
         if line.startswith('#EXTINF:'):
             # pull length and title from #EXTINF line
             length,song_full=line.split('#EXTINF:')[1].split(',',1)
